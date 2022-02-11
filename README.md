@@ -2,7 +2,7 @@
 
 Application flutter qui répertories des coctails.
 
-## Fonctionnalités :
+## Fonctionnalitées :
 
 Une barre de navigation est présente en bas de l'application pour naviguer entre les différents onglets :
 
