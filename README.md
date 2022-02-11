@@ -1,16 +1,16 @@
-# cocktail_app_mds
+# cocktail_app_mds`
 
-A new Flutter application.
+Application flutter qui répertories des coctails.
 
-## Getting Started
+## Fonctionnalités :
 
-This project is a starting point for a Flutter application.
+Une barre de navigation est présente en bas de l'application pour naviguer entre les différents onglets :
 
-A few resources to get you started if this is your first Flutter project:
+- Page d'accueil (Affichage d'un cocktail random) 
+- Page des cocktails (barre de recherche, filtrage par Alcool ou non alcool), au clique détail du cocktail & possibilité de l'ajouter au favoris
+- Page des favoris (liste des cocktails mis en favoris)
+ 
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## API utilisées :
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+https://www.thecocktaildb.com/api.php
