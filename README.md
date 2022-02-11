@@ -1,6 +1,6 @@
 # Application de Cocktails
 
-Application flutter qui répertories des coctails.
+Application flutter qui liste des coctails avec ou sans alcool.
 
 ## Fonctionnalitées :
 
