@@ -1,4 +1,4 @@
-# cocktail_app_mds`
+# Application de Cocktails
 
 Application flutter qui répertories des coctails.
 
