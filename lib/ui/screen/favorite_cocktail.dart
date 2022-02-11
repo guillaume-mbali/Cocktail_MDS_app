@@ -37,7 +37,7 @@ class _FavoriteCocktailPageState extends State<FavoriteCocktailPage> {
           title: const Text('Favorite(s)'),
         ),
         body: BlocBuilder<CocktailCubit, List<Cocktail>>(
-gi
+
           builder: (context, List<Cocktail> state) {
               return ListView.separated(
                 itemCount: state.length,
@@ -58,8 +58,7 @@ gi
                     trailing: IconButton(
                       icon: const Icon(Icons.delete),
                       onPressed: () async {
-                        bool isAlreadySaved = await Provider.of<CocktailCubit>(context, listen: false).state.contains(cocktail);
-                        print(isAlreadySaved);
+                        bool isAlreadySaved =  Provider.of<CocktailCubit>(context, listen: false).state.contains(cocktail);
                         if(isAlreadySaved){
                           Provider.of<CocktailCubit>(context, listen: false).removeCocktail(cocktail);
                         }
@@ -75,11 +74,8 @@ gi
                         ),
                       ),
                       );
-                      //print("${snapshot.data![index].idDrink}");
                     },
                   ),);
-
-
                 },
                 separatorBuilder: (context, index) {
                   return const Divider();

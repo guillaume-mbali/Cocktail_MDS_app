@@ -8,12 +8,7 @@ class Cocktail {
   String name;
   String img;
   bool? isFavorite;
-/*
-  @override
-  String toString() {
-  return 'Address{street: $street, city: $city, postcode: $postcode, position: $position}';
-  }
-*/
+
   Cocktail(this.id, this.name, this.img, this.isFavorite);
 
   String toJson() {

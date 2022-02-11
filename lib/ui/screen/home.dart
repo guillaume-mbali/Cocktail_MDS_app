@@ -55,7 +55,7 @@ class _HomeState extends State<HomePage> {
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
                                         fit: BoxFit.cover,
-                                        image:NetworkImage("${snapshot.data!.strDrinkThumb}")
+                                        image:NetworkImage(snapshot.data!.strDrinkThumb)
                                     ),
                                     borderRadius: BorderRadius.circular(10.0),
                                   ),
@@ -64,7 +64,7 @@ class _HomeState extends State<HomePage> {
                                   Navigator.push(context, MaterialPageRoute(
                                     builder: (context) => const DetailCocktailPage(),
                                     settings: RouteSettings(
-                                      arguments:  "${snapshot.data!.idDrink}",
+                                      arguments:  snapshot.data!.idDrink,
                                     ),
                                   ),
                                   );
@@ -75,12 +75,6 @@ class _HomeState extends State<HomePage> {
                               fontSize: 20,
                               fontWeight: FontWeight.w700,
                             ),),
-
-                           /* Padding(padding: EdgeInsets.all(20.0),
-                                child: Text(snapshot.data!.strDrink , style: GoogleFonts.ruda(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w700,
-                            ),),)*/
                           ],
                         )
                         );

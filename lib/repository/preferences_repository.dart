@@ -36,7 +36,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 
   }
 
-
   Future<void> saveFavoriteCocktail(List<Cocktail> cocktails,) async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
 

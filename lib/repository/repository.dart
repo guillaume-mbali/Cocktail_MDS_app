@@ -33,11 +33,5 @@ class Repository {
 
   Future<List<Cocktail>> loadCocktails() async =>_preferencesRepository.loadCocktails();
 
-/*
-  Future<void> saveCompanies(List<Company> companies) async {
-    _preferencesRepository.saveCompanies(companies);
-  }
-  Future<List<Company>> loadCompanies() async =>_preferencesRepository.loadCompanies();
-  */
 
 }

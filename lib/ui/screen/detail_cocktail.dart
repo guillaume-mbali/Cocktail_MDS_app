@@ -54,7 +54,7 @@ class _DetailCocktailPageState extends State<DetailCocktailPage> {
                           decoration: BoxDecoration(
                             image: DecorationImage(
                                 fit: BoxFit.cover,
-                                image:NetworkImage("${snapshot.data!.strDrinkThumb}")
+                                image:NetworkImage(snapshot.data!.strDrinkThumb)
                             ),
                             borderRadius: BorderRadius.circular(10.0),
                           ),
@@ -79,11 +79,11 @@ class _DetailCocktailPageState extends State<DetailCocktailPage> {
                                   ),
                                   TextButton.icon(
                                     icon: Icon( _isAlreadySaved ? Icons.favorite : Icons.favorite_border),
-                                    label: Text('Like'),
+                                    label: const Text('Like'),
                                     onPressed: () async {
                                       late Cocktail cocktail;
-                                      cocktail = new Cocktail("${snapshot.data!.idDrink}", "${snapshot.data!.strDrink}", "${snapshot.data!.strDrinkThumb}", true);
-                                      bool isAlreadySaved = await Provider.of<CocktailCubit>(context, listen: false).state.contains(cocktail);
+                                      cocktail = Cocktail(snapshot.data!.idDrink, snapshot.data!.strDrink, snapshot.data!.strDrinkThumb, true);
+                                      bool isAlreadySaved =  Provider.of<CocktailCubit>(context, listen: false).state.contains(cocktail);
                                       if(!isAlreadySaved){
                                         Provider.of<CocktailCubit>(context, listen: false).addCocktail(cocktail);
                                         isAlreadySaved = true;
@@ -91,22 +91,6 @@ class _DetailCocktailPageState extends State<DetailCocktailPage> {
                                       setState(() {
                                         _isAlreadySaved = isAlreadySaved;
                                       });
-
-                                      //.addCocktail(cocktail);
-
-/*
-                                      late Cocktail cocktail;
-                                      cocktail = new Cocktail("${snapshot.data!.idDrink}", "${snapshot.data!.strDrink}", "${snapshot.data!.idDrink}", true);
-                                     bool isAlreadySaved = await Provider.of<CocktailCubit>(context, listen: false).state.contains(cocktail);
-                                      if (await Provider.of<CocktailCubit>(context, listen: false).addCocktail(cocktail)) {
-                                        ScaffoldMessenger.of(context).showSnackBar(
-                                          const SnackBar(content: Text('Fruit added to favorites')),
-                                        );
-                                      }*/
-
-
-                                    //  Provider.of<CocktailCubit>(context, listen: false)
-                                          //.addCocktail(cocktail);
                                     },
                                   )
 
@@ -124,12 +108,7 @@ class _DetailCocktailPageState extends State<DetailCocktailPage> {
 
                         )
                           ,)
-
-
-
                       ),
-
-
                     ],
                   );
                 } else if (snapshot.hasError) {
@@ -140,7 +119,7 @@ class _DetailCocktailPageState extends State<DetailCocktailPage> {
               },
             );
           } else {
-            return Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
           }
         },
       ),
