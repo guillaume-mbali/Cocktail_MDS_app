@@ -62,7 +62,7 @@ class _FavoriteCocktailPageState extends State<FavoriteCocktailPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => FavoriteCocktailPage(),
+                              builder: (context) => const FavoriteCocktailPage(),
                             ),
                           );
                       },

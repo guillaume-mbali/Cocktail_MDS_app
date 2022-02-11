@@ -48,7 +48,7 @@ import 'package:shared_preferences/shared_preferences.dart';
   }
 
   Future<void> deleteCocktail(List<Cocktail> cocktails, String query) async {
-    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    //final SharedPreferences prefs = await SharedPreferences.getInstance();
 
     for (final Cocktail cocktail in cocktails) {
       if(cocktail.id == query){
