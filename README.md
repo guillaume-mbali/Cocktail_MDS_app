@@ -6,8 +6,8 @@ Application flutter qui répertories des coctails.
 
 Une barre de navigation est présente en bas de l'application pour naviguer entre les différents onglets :
 
-- Page d'accueil (Affichage d'un cocktail random) 
-- Page des cocktails (barre de recherche, filtrage par Alcool ou non alcool), au clique détail du cocktail & possibilité de l'ajouter au favoris
+- Page d'accueil, affichage d'un cocktail mis en avant (random)
+- Page des cocktails, barre de recherche, filtrage par Alcool ou non alcool (Au clique sur un cockatil -> détail de ce dernier & possibilité de l'ajouter au favoris)
 - Page des favoris (liste des cocktails mis en favoris)
  
 
