@@ -47,15 +47,18 @@ import 'package:shared_preferences/shared_preferences.dart';
     prefs.setStringList('cocktails', listJson);
   }
 
-  Future<void> unsaveFavoriteCocktail(List<Cocktail> cocktails,) async {
+  Future<void> deleteCocktail(List<Cocktail> cocktails, String query) async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
 
-    final List<String> listJson = [];
     for (final Cocktail cocktail in cocktails) {
-      listJson.remove(cocktail.toJson());
+      if(cocktail.id == query){
+        cocktails.remove(cocktail);
+        break;
+      }
     }
 
-    prefs.setStringList('cocktails', listJson);
+
+    //prefs.setStringList('cocktails', listJson);
   }
 
 

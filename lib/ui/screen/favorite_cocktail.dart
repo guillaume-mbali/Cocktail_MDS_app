@@ -58,10 +58,13 @@ class _FavoriteCocktailPageState extends State<FavoriteCocktailPage> {
                     trailing: IconButton(
                       icon: const Icon(Icons.delete),
                       onPressed: () async {
-                        bool isAlreadySaved =  Provider.of<CocktailCubit>(context, listen: false).state.contains(cocktail);
-                        if(isAlreadySaved){
                           Provider.of<CocktailCubit>(context, listen: false).removeCocktail(cocktail);
-                        }
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => FavoriteCocktailPage(),
+                            ),
+                          );
                       },
                     ),
                     onTap: (){

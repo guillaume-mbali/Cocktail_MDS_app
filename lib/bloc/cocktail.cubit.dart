@@ -17,10 +17,10 @@ class CocktailCubit extends Cubit<List<Cocktail>> {
   }
 
   void removeCocktail(Cocktail cocktail) {
-
-     emit([...state, cocktail]);
-    _repository.unsaveFavoriteCocktail(state);
+    // emit([...state, cocktail]);
+    _repository.deleteFavoriteCocktail(state, cocktail.id);
   }
+
 
   Future<void> loadCocktails() async {
     final List<Cocktail> cocktail = await _repository.loadCocktails();

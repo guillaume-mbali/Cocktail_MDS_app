@@ -25,11 +25,9 @@ class Repository {
     _preferencesRepository.saveFavoriteCocktail(cocktails);
   }
 
-  Future<void> unsaveFavoriteCocktail(List<Cocktail> cocktails) async {
-    _preferencesRepository.unsaveFavoriteCocktail(cocktails);
+  Future<void> deleteFavoriteCocktail(List<Cocktail> cocktails, String query) async {
+    _preferencesRepository.deleteCocktail(cocktails, query);
   }
-
-
 
   Future<List<Cocktail>> loadCocktails() async =>_preferencesRepository.loadCocktails();
 
